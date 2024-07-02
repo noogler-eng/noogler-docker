@@ -30,3 +30,7 @@
 21. docker run -v $(pwd):/app:ro -v /app/node_modules -p 8080:8080 -d --name node-app node-backend-image 
 21. docker run -v $(pwd):/app:ro -v /app/node_modules --env PORT=4000 -p 4000:8080 -d --name node-app node-backend-image
 22. docker run -v $(pwd):/app:ro -v /app/node_modules --env-file ./.env -p 8080000:8080 -d --name node-app node-backend-image 
+23. docker volume ls
+24. docker volume rm
+25. docker volume prune
+26. docker rm node-app -fv

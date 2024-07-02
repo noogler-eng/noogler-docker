@@ -8,7 +8,7 @@ app.use(express.json());
 app.get("/", (req, res)=>{
     res.status(200).json({
         success: true,
-        msg: " GET route on '/'!!"
+        msg: " GET route on '/'!!!sharad!"
     })
 })
 

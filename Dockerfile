@@ -10,7 +10,8 @@ ENV PORT 8080
 # only for docs
 EXPOSE $PORT
 # CMD ["node", "index.js"]
-CMD ["npm", "run", "dev"]
+# CMD ["npm", "run", "dev"]
+CMD ["node", "index.js"]
 
 
 
