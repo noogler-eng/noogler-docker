@@ -6,10 +6,11 @@ COPY package.json .
 RUN npm install
 # copying all files
 COPY . ./
+ENV PORT 8080
 # only for docs
-EXPOSE 8080
-CMD ["node", "index.js"]
-
+EXPOSE $PORT
+# CMD ["node", "index.js"]
+CMD ["npm", "run", "dev"]
 
 
 

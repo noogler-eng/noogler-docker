@@ -8,12 +8,12 @@ app.use(express.json());
 app.get("/", (req, res)=>{
     res.status(200).json({
         success: true,
-        msg: " GET route on '/' "
+        msg: " GET route on '/'!!"
     })
 })
 
 app.get("/greet", (req, res)=>{
-    res.status(200).send("<p><i>hii, there<i></p>");
+    res.status(200).send("<p><i>hii, there!!!<i></p>");
 })
 
 // @default 3000
