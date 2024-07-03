@@ -3,7 +3,14 @@ FROM node:15
 WORKDIR /app        
 # here . means /app we dont have to again specify
 COPY package.json .
-RUN npm install
+RUN npm install 
+
+ARG NODE_ENV 
+RUN if [ " $NODE_ENV" = "development" ]; \
+        then npm install; \
+        else npm install --only=production; \
+        fi
+
 # copying all files
 COPY . ./
 ENV PORT 8080
@@ -12,8 +19,6 @@ EXPOSE $PORT
 # CMD ["node", "index.js"]
 # CMD ["npm", "run", "dev"]
 CMD ["node", "index.js"]
-
-
 
 
 # each steps are layer of images
